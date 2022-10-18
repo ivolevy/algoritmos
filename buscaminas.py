@@ -145,7 +145,7 @@ def no_hay_casillas_sin_abrir():
 
 def solicitar_coordenadas():
     while True:
-        coordenadas = input("Ingresa el string con las posiciones de las minas: ")
+        coordenadas = input("Ingresa el string con las posiciones de las minas formato A2B2C3, A2 representa la primer mina, B2 la segunda y C3 la tercera: ")
         if len(coordenadas) == COLUMNAS:
             return coordenadas
         else:
@@ -154,7 +154,7 @@ def solicitar_coordenadas():
 
 def solicitar_casilla():
     while True:
-        casilla = input("Ingresa la casilla del tablero que quieres abrir: ")
+        casilla = input("Ingresa la casilla del tablero que quieres abrir, formato letraNumero(ej: A1): ")
         casilla = casilla.upper()
         if len(casilla) != 2:
             print("Debes introducir una letra y un número")
