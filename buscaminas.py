@@ -1,3 +1,5 @@
+import string, random
+
 MINA = "*"
 ESPACIO_SIN_ABRIR = "."
 ESPACIO_ABIERTO = "-"
@@ -150,6 +152,28 @@ def solicitar_coordenadas():
             return coordenadas
         else:
             print("Coordenadas no válidas. Intenta de nuevo")
+
+
+numeros = []
+for i in range(3):
+    numeros.append(random.randint(1,9))
+print(numeros)
+
+letras=[]
+for i in range(3):
+    letras.append(random.choice(string.ascii_letters))
+    
+print(letras)
+
+total_minas = []
+for i in range(len(numeros)-1):
+    for j in range(len(letras)-1):
+        lugar_minas = letras[j].upper() + str(numeros[i])
+        total_minas.append(lugar_minas)
+        j = j+1
+        i = i+1
+print(lugar_minas)
+print(total_minas)
 
 
 def solicitar_casilla():
